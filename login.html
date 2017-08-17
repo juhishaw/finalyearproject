@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Vidya Blog</title>
+    <script src = "./js/login.js"></script>
+    <link href = "./css/login.css" rel = "stylesheet">
+    
+    <!--ico-->
+    <link rel="icon" href=".\images\logo (1).ico" type="image/x-icon">
+<!--    <script src='https://www.google.com/recaptcha/api.js'></script>-->
+</head>
+<body>
+    <!--loader-->
+    
+   
+        
+ 
+
+    <a href = "front.html">
+    <img src="./image/ab.png" align="left">
+    </a>
+    <a href="all.html">
+        <img src="https://www.shareicon.net/data/2015/06/22/58098_notepad_282x282.png" align="right" width="75px" height="70px">
+    </a>
+
+    <div ng-controller="log">
+    <section class="log" style="margin-top: 1cm;">
+  <div class="span-6">
+    <div class="login">
+      <h1>Welcome!</h1>
+      <form ng-submit="login()">
+      <div class="login-content">
+        <label id="emailLabel">Please enter a valid email</label>
+        <input id="email" ng-model="user.email" placeholder="Email" required / >
+        <label id="passwordLabel">Please enter your password</label>
+        <input type="password" ng-model="user.password" id="password" placeholder="Password" required / ><br>
+        
+<!--         <div class="g-recaptcha" data-sitekey="6Leb4SsUAAAAADOvfprX35V7UH_-9qtkV8RCCZ0A"></div>-->
+         
+         <br />
+          <a href="forgot.html">Forgot?</a>&nbsp;<a href="sign.html">New user?</a><br>
+        
+        <input type = "submit" value="Login" style = "background-color: #d25555">
+          
+      </div>
+      </form>
+    </div>
+  </div>
+  <div class="span-6">
+    <div class="message">
+      <span class="first">Vidya</span>
+      <span class="second">blog</span>
+      <span class="third">post!</span>
+  </div>
+        </div>
+</section>
+    </div>
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src = "./js/app_login.js"></script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vidya Blog</title>
+    <script src="./js/login.js"></script>
+    <link href="./css/login.css" rel="stylesheet">
+    <!--ico-->
+    <link rel="icon" href=".\images\logo (1).ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <a href="front.html">
+        <img src="./image/ab.png" align="left">
+    </a>
+    <div ng-controller="sign">
+    <section class="log">
+        <div class="span-6">
+            <div class="login">
+                <h1>Hi Blogger!</h1>
+                <div class="login-content">
+                   <form ng-submit = "sign()">
+                    <label id="username">Username</label>
+                    <input id="name" placeholder="Username" ng-model = "data.username" required aria-required=”true” pattern="[A-Z-a-z]+\s[A-Z-a-z]+" />
+                    <label id="emailLabel">Please enter a valid email</label>
+                    <input id="email" placeholder="Email" ng-model = "data.email" required />
+                    <label id="passwordLabel">Please enter your password</label>
+                    <input type="password" id="password" placeholder="Password" ng-model = "data.password" required /><br>
+                    <a href="login.html">Already a user?</a><br>
+                    <input type="submit" value="sign" style = "background-color: #d25555" >
+               </form>
+                </div>
+            </div>
+        </div>
+        <div class="span-6">
+            <div class="message">
+                <span class="first">Vidya</span>
+                <span class="second">blog</span>
+                <span class="third">post!</span>
+            </div>
+        </div>
+    </section>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src = "./js/app_sign.js"></script>
+</html>

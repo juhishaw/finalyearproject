@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+
+
+    <link href="./css/style.css" rel="stylesheet" />
+    <script src="./js/login.js"></script>
+    <link href="./css/post.css" rel="stylesheet">
+    <link href="./css/write.css" rel="stylesheet">
+    <link href="./css/overlay.css" rel="stylesheet">
+
+    <!--ico-->
+    <link rel="icon" href=".\images\logo (1).ico" type="image/x-icon">
+    <!--    <script src="./js/pre.js"></script>-->
+    <script src="./js/overlay.js"></script>
+    <!--ckeditor-->
+    <link href="./ckeditor/style.css" rel="stylesheet" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+<div ng-controller="myCtrl1">
+    <a href = "thanks.html" ng-click = "logout()">
+        <img src="http://www.playtimeparis.com/images/exposer/logo-login.png" align="right" width="70px" height="70px">
+    </a>
+    &nbsp;
+
+    <a href="team.html">
+        <img src="http://www.freeiconspng.com/uploads/about-us-icon-30.png" align="right" width="75px" height="70px">
+    </a>
+
+<!--
+    <a href="temp.html">
+        <img src="http://www.pngmart.com/files/1/Pencil-Icon-PNG.png" align="right" width="75px" height="70px">
+    </a>
+-->
+
+
+    <img src="./image/ab.png" align="left">
+     <div ng-controller="myCtrl1">
+    <div class="write">
+        <br /><br /><br /><br />
+        <center>
+            <select style="width: 450px" ng-model="blog.categ">
+          <option value = "cs">Controversial Subjects</option>
+          <option value = "ce">Current Events</option>
+          <option value = "case">Case Studies</option>
+          <option value = "interviews">Interviews</option>
+           <option value = "reviews">Reviews</option>
+           <option value = "comp">Comaprisons</option>
+           <option value = "inspire">Inspirational Stories</option>
+           <option value = "parody">Parody Posts</option>
+           <option value = "funny">Funny Posts</option>
+           <option value = "quiz">Quizzes</option>
+           <option value = "rants">Rants(Speak about anything)</option>
+           <option value = "mf">Myth vs. Fact</option>
+           <option value = "poems">Poems</option>
+           <option value = "love">Love Stories</option>
+           <option value = "shayari">Shayari</option>
+           <option value = "tech">Technical</option>
+              <option value = "recep">Share Recipes</option>
+           
+</select>
+        </center>
+        <br />
+        <input type="text" ng-model="blog.title" id="postTitle" class="inputText" placeholder="Post title" name="postTitle" />
+
+        <textarea ng-model="blog.text" id="postBody" name="postBody" ckeditor="{allowedContent:true}"></textarea>
+        <br />
+
+        <center>
+            <input type="submit" value="Publish" class="wallButton" id="publish" ng-click="on()" />
+            <div id="overlay" onclick="off()">
+                <div id="text">Thank You!</div>
+            </div>
+        </center>
+        <br />
+    </div>
+
+    </div>
+    </div>
+</body>
+<script>
+   // var editor = CKEDITOR.replace('postBody');
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="js/angular-ckeditor.min.js"></script>
+<script src="./ckeditor/ckeditor/ckeditor.js"></script>
+    <script src="./ckeditor/js/jquery.min.js"></script>
+<script src = "./js/app_post.js"></script>
+<!--
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src = "./js/app.js"></script>
+-->
+</html>

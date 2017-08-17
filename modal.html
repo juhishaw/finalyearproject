@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" >
+<head>
+    <meta charset="UTF-8">
+    <title>Vidya Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href = "./css/login.css" rel = "stylesheet">
+    
+    <!--ico-->
+    <link rel="icon" href=".\images\logo (1).ico" type="image/x-icon">
+<!--    <script src='https://www.google.com/recaptcha/api.js'></script>-->
+<style>
+    #bot{
+        margin-right: 5px;
+    }
+    </style>
+</head>
+<body >
+    <!--loader-->
+    
+   <a href = "login.html" >
+    <img src = "http://www.playtimeparis.com/images/exposer/logo-login.png" align = "right" width = "70px" height = "70px">
+    </a>
+    &nbsp;
+
+        <a href = "team.html">
+    <img src = "http://www.freeiconspng.com/uploads/about-us-icon-30.png" align = "right" width = "75px" height = "70px">
+    </a>
+ 
+
+    <a href = "front.html">
+    <img src="./image/ab.png" align="left">
+    </a>
+    
+  <!-- Trigger the modal with a button -->
+  <div ng-controller="myCtrl">
+      
+      
+      <button type="button" class="btn btn-info btn-lg"  ng-click="showModal(blog)" style="margin-top: 150px" ng-repeat="blog in blogs" id = "bot">{{blog.title}}</button>&nbsp;&nbsp;
+      
+ 
+  <!--
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top: 150px">Title</button>&nbsp;&nbsp;
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top: 150px">Title</button>&nbsp;&nbsp;
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top: 150px">Title</button>&nbsp;&nbsp;
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top: 150px">Title</button>&nbsp;&nbsp;
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="margin-top: 150px">Title</button>
+    -->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      
+      <div class="modal-content">
+        <div class="modal-body">
+          <p ng-bind-html="modal.text"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.min.js"></script>
+<script src = "./js/app.js"></script>
+</body>
+</html>
